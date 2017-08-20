@@ -1,6 +1,6 @@
 ## Description
 
-This project creates a working blackjack card game between a dealer and a player.  Cards are drawn from a deck and given to the various players.
+This project creates a working blackjack card game between a dealer and a player.  Cards are drawn from a deck and given to the various players. The player can choose to hit or stay.
 
 ## Topics Covered
 
@@ -14,4 +14,4 @@ This project creates a working blackjack card game between a dealer and a player
 
 ## To Run project
 
-In the Blackjack directory, run Game.java
+In the src the Blackjack directory, run Game.java
