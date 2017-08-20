@@ -14,4 +14,4 @@ This project creates a working blackjack card game between a dealer and a player
 
 ## To Run project
 
-In the src the Blackjack directory, run Game.java
+In the src directory, run Game.java
