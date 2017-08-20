@@ -44,9 +44,11 @@ public class Hand {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Hand [hand=");
+		builder.append("=");
 		builder.append(hand);
-		builder.append("]");
+		builder.append("");
+		builder.append(" value: " + this.getValueOfHand());
+	
 		return builder.toString();
 	}
 

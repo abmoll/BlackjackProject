@@ -10,6 +10,7 @@ public class Deck {
 	List<Card> deck = new ArrayList<Card>(52);
 
 	public void shuffleDeck() {
+		Collections.sort(deck);
 
 		for (Suit s : Suit.values()) {
 			int v = 2;
@@ -17,20 +18,19 @@ public class Deck {
 				deck.add(new Card(r, s, v));
 				if (v < 10)
 					v++;
-
 			}
 
-			Collections.sort(deck);
-			for (Card card : deck) {
-
-				System.out.println(card);
-				System.out.println(card.value);
-			}
+			Card card1 = deck.get(deck.size()-1);
+			card1.value = 11;
+			
+//			for (Card card : deck) {
+//
+//				System.out.println(card);
+//				System.out.println(card.value);
+//			}
 
 			Collections.shuffle(deck);
-			for (Card card : deck) {
-				System.out.println(card);
-			}
+			
 		}
 	}
 
