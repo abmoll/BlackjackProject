@@ -6,13 +6,19 @@ public class Game {
 
 	public static void main(String[] args) {
 		List<Card> deck = new ArrayList<Card>(52);
+	
 		// set player names
 		Player dealer = new Player("Dealer");
 		Player player = new Player("Player");
-		// Game g1 = new Game();
+		int dwins = 0;
+		int pwins = 0;
+		
+		//player hand
 		Hand p = new Hand();
+		//dealer hand
 		Hand d = new Hand();
 		Deck d1 = new Deck();
+
 
 		d1.shuffleDeck();
 
@@ -36,16 +42,23 @@ public class Game {
 		System.out.println("Welcome to Blackjack!");
 		System.out.println("Dealer hand" + d);
 		System.out.println("Player hand" + p);
+		
 
 		Scanner keyb = new Scanner(System.in);
 
 		while (gameOver == false) {
 			if (d.getValueOfHand() == 21) {
-				System.out.println("**Blackjack** Dealer has 21 and wins!");
+				System.out.println("**Blackjack** \nDealer has 21 and wins!");
 				gameOver = true;
+//				dealer.setWins(dwins);
+//				System.out.println("Dealer has " + dealer.getWins() + " wins.");
+//				gameOver = true;
 			} else if (p.getValueOfHand() == 21) {
-				System.out.println("**Blackjack** Player has 21 and wins!");
+				System.out.println("**Blackjack** \nPlayer has 21 and wins!");
+//				player.wins = pwins++;
+//				System.out.println("Player has " + pwins + " wins.");
 				gameOver = true;
+				
 			} else if (d.getValueOfHand() < 21 && p.getValueOfHand() < 21) {
 				System.out.println("\nEnter your choice:");
 				System.out.println("1. Hit\n" + "2. Stay");
@@ -62,10 +75,15 @@ public class Game {
 
 					if (p.getValueOfHand() > 21) {
 						System.out.println("You are over 21. Dealer wins!!!");
+//						dealer.wins = dwins++;
+//						System.out.println("Dealer has " + dwins + " wins.");
 						gameOver = true;
 						break;
-					} else if (p.getValueOfHand() == 21) {
+					} 
+					else if (p.getValueOfHand() == 21) {
 						System.out.println("You have 21 -- you win!");
+//						player.wins = pwins++;
+//						System.out.println("Player has " + pwins + " wins.");
 						gameOver = true;
 						break;
 					}
@@ -82,6 +100,8 @@ public class Game {
 					}
 					if (d.getValueOfHand() > 21) {
 						System.out.println("Dealer is over 21. You win!!!");
+//						player.wins = pwins++;
+//						System.out.println("Player has " + pwins + " wins.");
 						gameOver = true;
 					}
 					else if (d.getValueOfHand() > p.getValueOfHand()) {
