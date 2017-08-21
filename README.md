@@ -6,7 +6,7 @@ This project creates a working blackjack card game between a dealer and a player
 
 * Object-oriented design and UML
 * Enums
-* Arraylists
+* ArrayLists
 * Basic game design and game logic
 
 
