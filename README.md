@@ -1,6 +1,6 @@
 ## Description
 
-This project creates a working blackjack card game between a dealer and a player.  Cards are drawn from a deck and given to the various players. The player can choose to hit or stay.
+This project creates a working blackjack card game between a dealer and a player.  Cards are drawn from a deck and given to the dealer and the player. The player can choose to hit or stay.
 
 ## Topics Covered
 

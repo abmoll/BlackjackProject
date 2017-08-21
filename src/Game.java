@@ -16,37 +16,37 @@ public class Game {
 
 		d1.shuffleDeck();
 
-		// get next card
+		// deal first dealer card
 		Card card = d1.dealCard();
-		// add card to dealer hand
 		d.addCard(card);
 
+		// deal first player card
 		card = d1.dealCard();
 		p.addCard(card);
 
+		// deal second dealer card
 		card = d1.dealCard();
 		d.addCard(card);
 
+		// deal second player card
 		card = d1.dealCard();
 		p.addCard(card);
+
 		boolean gameOver = false;
 		System.out.println("Welcome to Blackjack!");
 		System.out.println("Dealer hand" + d);
 		System.out.println("Player hand" + p);
-		// System.out.println("Dealer value: " + d.getValueOfHand());
-		// System.out.println("Player value: " + p.getValueOfHand());
+
 		Scanner keyb = new Scanner(System.in);
 
 		while (gameOver == false) {
 			if (d.getValueOfHand() == 21) {
-				System.out.println("Dealer has 21 and wins!");
+				System.out.println("**Blackjack** Dealer has 21 and wins!");
 				gameOver = true;
 			} else if (p.getValueOfHand() == 21) {
-				System.out.println("Player has 21 and wins!");
+				System.out.println("**Blackjack** Player has 21 and wins!");
 				gameOver = true;
-			}
-
-			else if (d.getValueOfHand() < 21 && p.getValueOfHand() < 21) {
+			} else if (d.getValueOfHand() < 21 && p.getValueOfHand() < 21) {
 				System.out.println("\nEnter your choice:");
 				System.out.println("1. Hit\n" + "2. Stay");
 				int choice = keyb.nextInt();
@@ -69,9 +69,6 @@ public class Game {
 						gameOver = true;
 						break;
 					}
-					// else if (p.getValueOfHand() < d.getValueOfHand()){
-					// System.out.println("Dealer wins!");
-					// gameOver = true;
 					break;
 
 				case 2:
@@ -83,14 +80,12 @@ public class Game {
 						System.out.println("Dealer hand" + d);
 						System.out.println("Player hand" + p);
 					}
-
 					if (d.getValueOfHand() > 21) {
 						System.out.println("Dealer is over 21. You win!!!");
 						gameOver = true;
 					}
-
 					else if (d.getValueOfHand() > p.getValueOfHand()) {
-						System.out.println("Dealer wins!");
+						System.out.println("Dealer does not take another card. Dealer wins!");
 						gameOver = true;
 					}
 
