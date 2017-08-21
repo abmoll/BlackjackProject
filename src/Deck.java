@@ -51,16 +51,5 @@ public class Deck {
 	// System.out.println(deck.get(i));
 	// }
 
-	// System.out.println(deck.get(0));
-	// System.out.println("*** Sorted Cards ***");
-	// Collections.sort(deck);
-	// for (Card card : deck) {
-	// System.out.println(card);
-	// }
 
-	// System.out.println(deck.get(0));
-	// System.out.println("*** Shuffled Cards ***");
-	// for (Card card : deck) {
-	// System.out.println(card);
-	// }
 }
